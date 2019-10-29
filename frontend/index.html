@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>地址管理系统</title>
+    <link href="./static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./static/jquery-easyui-1.7.0/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./static/jquery-easyui-1.7.0/themes/icon.css">
+    <link href="./static/layui-v2.5.5/layui/css/layui.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+</head>
+<body>
+
+
+<table id="dg" class="easyui-datagrid" style="width:100%"
+       title="地址管理系统"
+       rownumbers="true" pagination="true" fitColumns="true" singleSelect="true" data-options="toolbar:'#tb'">
+    <thead>
+    <tr>
+        <th field="addressId" width="80">地址Id</th>
+        <th field="streetName" width="80">街道名称</th>
+        <th field="streetAddress" width="80">街道地址</th>
+        <th field="city" width="80">城市</th>
+        <th field="country" width="80">国家</th>
+        <th field="zipCode" width="80">邮编</th>
+        <th field="latitude" width="80">纬度</th>
+        <th field="longitude" width="80">经度</th>
+        <th field="created" width="80">创建日期</th>
+        <th field="updated" width="80">编辑日期</th>
+    </tr>
+    </thead>
+
+</table>
+
+<div id="tb" style="padding:2px 5px;">
+    <div class="mr-10">
+        <input type="text" id="inputSearchAddress" placeholder="输入地址名字检索" class="pd-5px" />
+        <i id="inputSearchIcon" class="fa fa-search cr-lightblue" onclick="searchAddress()"></i>
+    </div>
+    <div class="cursorPointer" onclick="createAddress()">
+        <i class="fa fa-file-o cr-lightblue"></i>
+        <span>新建地址</span>
+    </div>
+</div>
+<script src="./static/jquery-easyui-1.7.0/jquery.min.js"></script>
+<script src="./static/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+<script src="./static/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js"></script>
+<script src="./static/layui-v2.5.5/layui/layui.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
